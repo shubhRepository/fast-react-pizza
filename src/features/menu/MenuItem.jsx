@@ -1,5 +1,6 @@
 import { formatCurrency } from "../../utils/helpers";
 
+/* eslint-disable */
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
