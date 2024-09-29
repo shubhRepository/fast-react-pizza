@@ -1,11 +1,19 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { updateUserName } from "./userSlice";
 import Button from "../../ui/Button";
 
 function CreateUser() {
   const [username, setUsername] = useState("");
+  const dispatch = useDispatch();
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!username) return;
+
+    dispatch(updateUserName(username));
   }
 
   return (
